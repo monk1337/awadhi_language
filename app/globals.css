@@ -1,0 +1,111 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* Warm tones */
+  --color-saffron: #E07A2F;
+  --color-saffron-light: #F0A060;
+  --color-saffron-dark: #C06820;
+  --color-amber: #D4A843;
+  --color-amber-light: #E4C473;
+  --color-amber-dark: #B08A30;
+  --color-terracotta: #B85C38;
+  --color-terracotta-light: #D07850;
+  --color-terracotta-dark: #983C20;
+
+  /* Neutrals */
+  --color-cream: #FAF6F0;
+  --color-cream-dark: #F0E8DB;
+  --color-parchment: #E8DCC8;
+  --color-charcoal: #2D2A26;
+  --color-charcoal-light: #3D3A36;
+  --color-slate: #6B6560;
+  --color-slate-light: #8A8580;
+
+  /* Vitality (maps) */
+  --color-vitality-green: #4A9B6E;
+  --color-vitality-yellow: #D4A843;
+  --color-vitality-red: #C75B4A;
+  --color-vitality-gray: #8A8580;
+
+  /* Crisis section */
+  --color-dark-bg: #1A1816;
+  --color-dark-surface: #252220;
+  --color-dark-text: #E8DCC8;
+
+  /* Typography */
+  --font-playfair: var(--font-playfair);
+  --font-inter: var(--font-inter);
+  --font-devanagari: var(--font-devanagari);
+  --font-cormorant: var(--font-cormorant);
+  --font-mono: var(--font-mono);
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection colors */
+::selection {
+  background-color: color-mix(in srgb, var(--color-saffron) 30%, transparent);
+  color: var(--color-charcoal);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-parchment);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-slate-light);
+}
+
+/* Heading typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+/* Data number typography */
+.font-data {
+  font-family: var(--font-mono), "JetBrains Mono", monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Devanagari text */
+.font-devanagari {
+  font-family: var(--font-devanagari), "Noto Sans Devanagari", sans-serif;
+}
+
+/* Quote typography */
+.font-quote {
+  font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

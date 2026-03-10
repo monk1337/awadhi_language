@@ -35,6 +35,12 @@ export default function Footer() {
                 </Link>
               ))}
               <Link
+                href="/contribute-voice"
+                className="text-sm text-parchment/70 hover:text-saffron transition-colors duration-200"
+              >
+                Contribute Voice
+              </Link>
+              <Link
                 href="/open-source"
                 className="text-sm text-parchment/70 hover:text-saffron transition-colors duration-200"
               >

@@ -77,6 +77,7 @@ export default function Navigation() {
             })}
             <div className="mx-1 h-5 w-px bg-parchment" />
             {[
+              { href: "/contribute-voice", label: "Contribute Voice" },
               { href: "/open-source", label: "Open Source" },
               { href: "/about", label: "About" },
             ].map((link) => {
@@ -173,6 +174,7 @@ export default function Navigation() {
               })}
               <div className="my-2 mx-4 h-px bg-parchment/60" />
               {[
+                { href: "/contribute-voice", label: "Contribute Voice", subtitle: "Help build Awadhi speech AI" },
                 { href: "/open-source", label: "Open Source", subtitle: "Contribute to this project" },
                 { href: "/about", label: "About Lucknow AI", subtitle: "The community behind this" },
               ].map((link, index) => {

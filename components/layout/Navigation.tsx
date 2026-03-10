@@ -75,6 +75,27 @@ export default function Navigation() {
                 </Link>
               );
             })}
+            <div className="mx-1 h-5 w-px bg-parchment" />
+            {[
+              { href: "/open-source", label: "Open Source" },
+              { href: "/about", label: "About" },
+            ].map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    "px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200",
+                    isActive
+                      ? "text-saffron bg-saffron/10"
+                      : "text-charcoal-light hover:text-saffron hover:bg-saffron/5"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Mobile hamburger button */}
@@ -145,6 +166,40 @@ export default function Navigation() {
                       <span className="block">{section.title}</span>
                       <span className="block text-sm font-normal text-slate-light mt-0.5">
                         {section.subtitle}
+                      </span>
+                    </Link>
+                  </motion.div>
+                );
+              })}
+              <div className="my-2 mx-4 h-px bg-parchment/60" />
+              {[
+                { href: "/open-source", label: "Open Source", subtitle: "Contribute to this project" },
+                { href: "/about", label: "About Lucknow AI", subtitle: "The community behind this" },
+              ].map((link, index) => {
+                const isActive = pathname === link.href;
+                return (
+                  <motion.div
+                    key={link.href}
+                    initial={{ opacity: 0, x: -16 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                      duration: 0.3,
+                      delay: (sections.length + index) * 0.05,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                  >
+                    <Link
+                      href={link.href}
+                      className={cn(
+                        "block px-4 py-3 rounded-lg text-base font-medium transition-colors duration-200",
+                        isActive
+                          ? "text-saffron bg-saffron/10"
+                          : "text-charcoal hover:text-saffron hover:bg-saffron/5"
+                      )}
+                    >
+                      <span className="block">{link.label}</span>
+                      <span className="block text-sm font-normal text-slate-light mt-0.5">
+                        {link.subtitle}
                       </span>
                     </Link>
                   </motion.div>

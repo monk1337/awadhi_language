@@ -34,6 +34,18 @@ export default function Footer() {
                   {section.title}
                 </Link>
               ))}
+              <Link
+                href="/open-source"
+                className="text-sm text-parchment/70 hover:text-saffron transition-colors duration-200"
+              >
+                Open Source
+              </Link>
+              <Link
+                href="/about"
+                className="text-sm text-parchment/70 hover:text-saffron transition-colors duration-200"
+              >
+                About
+              </Link>
             </nav>
           </div>
 

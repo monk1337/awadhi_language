@@ -4,6 +4,7 @@ import Navigation from "@/components/layout/Navigation";
 import SmoothScrollProvider from "@/components/layout/SmoothScrollProvider";
 import ScrollProgress from "@/components/layout/ScrollProgress";
 import Footer from "@/components/layout/Footer";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -36,6 +37,7 @@ export default function RootLayout({
           <main className="min-h-screen">{children}</main>
           <Footer />
         </SmoothScrollProvider>
+        <Analytics />
       </body>
     </html>
   );

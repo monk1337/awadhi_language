@@ -34,7 +34,7 @@ export default function FloatingVoiceCTA() {
           className="fixed bottom-6 right-6 z-40"
         >
           <Link
-            href="/contribute-voice"
+            href="/contribute-voice#recorder"
             className="group flex items-center gap-3 rounded-2xl bg-saffron px-5 py-3 shadow-lg transition-all hover:bg-saffron-dark hover:shadow-xl"
           >
             <svg

@@ -80,7 +80,7 @@ export default function HeroSection() {
           className="mt-10"
         >
           <Link
-            href="/contribute-voice"
+            href="/contribute-voice#recorder"
             className="group relative inline-flex flex-col items-center gap-1 rounded-2xl bg-saffron px-8 py-4 text-center transition-all duration-300 hover:bg-saffron-dark nav-glow"
           >
             <span className="flex items-center gap-2.5 text-base font-semibold text-cream">

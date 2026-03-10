@@ -16,7 +16,7 @@ export default function Footer() {
             </p>
           </div>
           <Link
-            href="/contribute-voice"
+            href="/contribute-voice#recorder"
             className="flex shrink-0 items-center gap-2 rounded-full bg-saffron px-6 py-3 text-sm font-semibold text-cream transition-colors hover:bg-saffron-dark"
           >
             <svg
@@ -68,7 +68,7 @@ export default function Footer() {
                 </Link>
               ))}
               <Link
-                href="/contribute-voice"
+                href="/contribute-voice#recorder"
                 className="text-sm text-parchment/70 hover:text-saffron transition-colors duration-200"
               >
                 Contribute Voice

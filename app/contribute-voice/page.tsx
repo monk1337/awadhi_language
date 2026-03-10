@@ -116,7 +116,7 @@ export default function ContributeVoicePage() {
       <Divider />
 
       {/* THE RECORDER */}
-      <section className="space-y-8">
+      <section id="recorder" className="space-y-8 scroll-mt-24">
         <SectionHeading
           title="Start Recording"
           subtitle="Read the sentence below, then say it in your Awadhi"

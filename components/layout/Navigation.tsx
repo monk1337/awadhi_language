@@ -77,7 +77,7 @@ export default function Navigation() {
             })}
             <div className="mx-1 h-5 w-px bg-parchment" />
             <Link
-              href="/contribute-voice"
+              href="/contribute-voice#recorder"
               className={cn(
                 "relative flex items-center gap-2 px-3 py-2 text-sm font-semibold rounded-md transition-colors duration-200",
                 pathname === "/contribute-voice"
@@ -197,7 +197,7 @@ export default function Navigation() {
                 }}
               >
                 <Link
-                  href="/contribute-voice"
+                  href="/contribute-voice#recorder"
                   className={cn(
                     "flex items-center gap-3 px-4 py-3 rounded-lg text-base font-semibold transition-colors duration-200",
                     pathname === "/contribute-voice"

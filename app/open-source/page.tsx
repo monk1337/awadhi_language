@@ -121,7 +121,7 @@ export default function OpenSourcePage() {
         <RevealOnScroll delay={0.1}>
           <div className="flex justify-center">
             <Link
-              href="/contribute-voice"
+              href="/contribute-voice#recorder"
               className="inline-flex items-center gap-3 rounded-full bg-saffron px-8 py-4 text-base font-semibold text-cream transition-colors hover:bg-saffron-dark nav-glow"
             >
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>

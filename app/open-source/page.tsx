@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageWrapper from "@/components/layout/PageWrapper";
 import SectionHeading from "@/components/shared/SectionHeading";
 import Divider from "@/components/shared/Divider";
@@ -90,6 +91,46 @@ export default function OpenSourcePage() {
             </RevealOnScroll>
           ))}
         </div>
+      </section>
+
+      <Divider />
+
+      {/* Voice contribution */}
+      <section className="space-y-8">
+        <SectionHeading
+          title="Contribute Your Voice"
+          subtitle="You don't need to write code to help"
+        />
+
+        <RevealOnScroll>
+          <div className="mx-auto max-w-3xl space-y-6 text-lg leading-relaxed text-charcoal-light md:text-xl">
+            <p>
+              We are building open-source AI models so that Awadhi speakers can
+              use technology in their own mother tongue. Our parents, grandparents,
+              and village elders, the people who speak Awadhi most naturally, are
+              completely left out of the AI world. No voice assistant understands
+              them. No speech-to-text works for them.
+            </p>
+            <p>
+              You can help change that by recording a few sentences in your Awadhi.
+              It takes 2 minutes and works right in your browser.
+            </p>
+          </div>
+        </RevealOnScroll>
+
+        <RevealOnScroll delay={0.1}>
+          <div className="flex justify-center">
+            <Link
+              href="/contribute-voice"
+              className="inline-flex items-center gap-3 rounded-full bg-saffron px-8 py-4 text-base font-semibold text-cream transition-colors hover:bg-saffron-dark nav-glow"
+            >
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+              </svg>
+              Start Recording Your Voice
+            </Link>
+          </div>
+        </RevealOnScroll>
       </section>
 
       <Divider />

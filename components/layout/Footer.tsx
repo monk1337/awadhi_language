@@ -9,10 +9,10 @@ export default function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 py-10 text-center sm:px-6 md:flex-row md:justify-between md:text-left lg:px-8">
           <div>
             <p className="font-playfair text-xl font-semibold text-cream">
-              Your voice can help preserve Awadhi
+              Help our parents and village elders use AI in their own language
             </p>
             <p className="mt-1 text-sm text-parchment/60">
-              Record a few sentences in Awadhi. No signup, no app download. Just your voice and 2 minutes.
+              We are building AI that understands Awadhi so that 38 million people can use technology in their mother tongue. Record a few sentences. Just your voice and 2 minutes.
             </p>
           </div>
           <Link

@@ -9,6 +9,7 @@ export async function POST(request: NextRequest) {
     const sessionId = formData.get("session_id") as string;
     const district = formData.get("district") as string;
     const ageGroup = formData.get("age_group") as string;
+    const gender = formData.get("gender") as string;
     const duration = formData.get("duration") as string;
 
     if (!audio || !sentenceId) {
@@ -47,6 +48,7 @@ export async function POST(request: NextRequest) {
         session_id: sessionId,
         district: district || null,
         age_group: ageGroup || null,
+        gender: gender || null,
         duration: parseInt(duration) || 0,
         file_path: filePath,
         file_size: audio.size,

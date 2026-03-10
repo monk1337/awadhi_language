@@ -9,7 +9,7 @@ import VoiceRecorder from "@/components/voice/VoiceRecorder";
 export const metadata: Metadata = {
   title: "Contribute Your Voice",
   description:
-    "Help build the first open-source Awadhi speech recognition model. Record sentences in Awadhi and contribute to language preservation.",
+    "Help build AI that understands Awadhi so our parents and village elders can use technology in their mother tongue. Record sentences and contribute to language preservation.",
 };
 
 const steps = [
@@ -44,11 +44,11 @@ const faqs = [
   },
   {
     q: "How will this data be used?",
-    a: "To train an open-source Awadhi speech-to-text model. The dataset and the model will both be freely available to everyone.",
+    a: "To train an open-source Awadhi speech-to-text model so that Awadhi speakers, especially our parents and village elders, can use AI in their mother tongue. The dataset and the model will both be freely available to everyone.",
   },
   {
     q: "Will my personal information be shared?",
-    a: "No. We only collect district and age group for dialect analysis. Nothing else is stored or published.",
+    a: "No. We only collect district, age group, and gender for dialect analysis and model training. Nothing personally identifiable is stored or published.",
   },
   {
     q: "What audio quality is recorded?",
@@ -61,7 +61,7 @@ export default function ContributeVoicePage() {
     <PageWrapper>
       <SectionHeading
         title="Contribute Your Voice"
-        subtitle="Help us build the first open-source Awadhi speech recognition model"
+        subtitle="Help us build AI that understands Awadhi"
         align="center"
       />
 
@@ -70,9 +70,17 @@ export default function ContributeVoicePage() {
         <div className="mx-auto max-w-3xl space-y-6 text-lg leading-relaxed text-charcoal-light md:text-xl">
           <p>
             38 million people speak Awadhi. Yet there is no speech recognition
-            model, no voice assistant, and no speech-to-text system that
-            understands a single word of it. We want to change that, and we
-            need your voice to make it happen.
+            model, no voice assistant, and no AI system that understands a single
+            word of it. Our parents, grandparents, and village elders, the people
+            who speak Awadhi most fluently, are completely left out of the AI
+            revolution.
+          </p>
+          <p>
+            We want to change that. We are building open-source AI models so that
+            Awadhi speakers can use technology in their own mother tongue. Talk to
+            a voice assistant, dictate a message, or get information without
+            switching to Hindi or English. And we need your voice to make it
+            happen.
           </p>
         </div>
       </RevealOnScroll>
@@ -131,19 +139,19 @@ export default function ContributeVoicePage() {
             <ul className="space-y-4 text-base leading-relaxed text-charcoal-light md:text-lg">
               <li className="flex gap-3">
                 <span className="mt-1 shrink-0 text-saffron">&#10003;</span>
+                <span><strong>Speak slowly and clearly</strong>, as if explaining something to a child</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1 shrink-0 text-saffron">&#10003;</span>
+                <span><strong>Don&apos;t repeat the Hindi sentence</strong>, translate it into your Awadhi naturally</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1 shrink-0 text-saffron">&#10003;</span>
                 <span>Record in a quiet environment with minimal background noise</span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-1 shrink-0 text-saffron">&#10003;</span>
-                <span>Speak naturally at your normal pace, as you would with family</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="mt-1 shrink-0 text-saffron">&#10003;</span>
                 <span>Hold your phone 6 to 12 inches from your mouth</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="mt-1 shrink-0 text-saffron">&#10003;</span>
-                <span>Multiple recordings are welcome. The more, the better</span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-1 shrink-0 text-saffron">&#10003;</span>
@@ -179,7 +187,7 @@ export default function ContributeVoicePage() {
       <Divider />
 
       {/* Closing quote */}
-      <PullQuote quote="Every voice recorded is a vote for Awadhi's future in the digital world. Yours could be the one that teaches a machine to listen." />
+      <PullQuote quote="Imagine your mother asking her phone a question in Awadhi and getting an answer. That future starts with your voice today." />
     </PageWrapper>
   );
 }

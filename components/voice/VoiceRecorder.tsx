@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@/lib/utils";
 import { encodeWAV } from "@/lib/wav-encoder";
 
 type RecordingState =
@@ -43,6 +42,7 @@ const DISTRICTS = [
 ];
 
 const AGE_GROUPS = ["18–25", "26–35", "36–50", "50+"];
+const GENDERS = ["Male", "Female", "Prefer not to say"];
 
 const fadeVariants = {
   initial: { opacity: 0, y: 12 },
@@ -59,9 +59,11 @@ export default function VoiceRecorder() {
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
   const [district, setDistrict] = useState("");
   const [ageGroup, setAgeGroup] = useState("");
+  const [gender, setGender] = useState("");
   const [sessionCount, setSessionCount] = useState(0);
   const [levels, setLevels] = useState<number[]>(new Array(40).fill(0));
   const [error, setError] = useState<string | null>(null);
+  const [showOnboarding, setShowOnboarding] = useState(false);
 
   // Audio refs
   const audioCtxRef = useRef<AudioContext | null>(null);
@@ -73,6 +75,9 @@ export default function VoiceRecorder() {
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const animRef = useRef<number | null>(null);
   const playbackRef = useRef<HTMLAudioElement | null>(null);
+
+  // Check if metadata is complete
+  const hasMetadata = district && ageGroup && gender;
 
   // Load sentences
   useEffect(() => {
@@ -92,6 +97,7 @@ export default function VoiceRecorder() {
       const meta = JSON.parse(saved);
       if (meta.district) setDistrict(meta.district);
       if (meta.ageGroup) setAgeGroup(meta.ageGroup);
+      if (meta.gender) setGender(meta.gender);
       if (meta.count) setSessionCount(meta.count);
     }
     if (!localStorage.getItem("awadhi-session-id")) {
@@ -106,9 +112,9 @@ export default function VoiceRecorder() {
   useEffect(() => {
     localStorage.setItem(
       "awadhi-voice-meta",
-      JSON.stringify({ district, ageGroup, count: sessionCount }),
+      JSON.stringify({ district, ageGroup, gender, count: sessionCount }),
     );
-  }, [district, ageGroup, sessionCount]);
+  }, [district, ageGroup, gender, sessionCount]);
 
   const pickRandom = useCallback(
     (pool?: Sentence[]) => {
@@ -125,7 +131,6 @@ export default function VoiceRecorder() {
     if (!analyserRef.current) return;
     const data = new Uint8Array(analyserRef.current.frequencyBinCount);
     analyserRef.current.getByteFrequencyData(data);
-    // Sample 40 bars from the frequency data
     const bars = 40;
     const step = Math.floor(data.length / bars);
     const newLevels: number[] = [];
@@ -188,6 +193,22 @@ export default function VoiceRecorder() {
     }
   };
 
+  // Handle mic button click: show onboarding if first time, else start recording
+  const handleMicClick = () => {
+    if (!hasMetadata) {
+      setShowOnboarding(true);
+    } else {
+      startRecording();
+    }
+  };
+
+  // Complete onboarding and start recording
+  const completeOnboarding = () => {
+    if (!district || !ageGroup || !gender) return;
+    setShowOnboarding(false);
+    startRecording();
+  };
+
   const stopRecording = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
     if (animRef.current) cancelAnimationFrame(animRef.current);
@@ -244,6 +265,7 @@ export default function VoiceRecorder() {
       formData.append("session_id", localStorage.getItem("awadhi-session-id") || "");
       formData.append("district", district);
       formData.append("age_group", ageGroup);
+      formData.append("gender", gender);
       formData.append("duration", String(duration));
 
       const res = await fetch("/api/upload-voice", {
@@ -285,6 +307,152 @@ export default function VoiceRecorder() {
 
   return (
     <div className="mx-auto max-w-2xl">
+      {/* Onboarding modal overlay */}
+      <AnimatePresence>
+        {showOnboarding && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-charcoal/60 backdrop-blur-sm px-4"
+            onClick={(e) => {
+              if (e.target === e.currentTarget) setShowOnboarding(false);
+            }}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 30, scale: 0.95 }}
+              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              className="w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl border border-parchment bg-cream p-6 shadow-2xl sm:p-8"
+            >
+              {/* Header */}
+              <div className="text-center">
+                <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-saffron/10">
+                  <svg className="h-7 w-7 text-saffron" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                  </svg>
+                </div>
+                <h3 className="font-playfair text-xl font-bold text-charcoal sm:text-2xl">
+                  Before You Start
+                </h3>
+                <p className="mt-1 text-sm text-slate">
+                  Quick details + instructions (one-time only)
+                </p>
+              </div>
+
+              {/* Instructions */}
+              <div className="mt-6 rounded-xl bg-saffron/5 border border-saffron/20 p-4 sm:p-5">
+                <h4 className="font-semibold text-charcoal text-xs uppercase tracking-wider mb-3">
+                  How this works
+                </h4>
+                <ul className="space-y-2 text-sm text-charcoal-light leading-relaxed">
+                  <li className="flex gap-2.5">
+                    <span className="mt-0.5 shrink-0 text-saffron font-bold">1.</span>
+                    <span>We show you a sentence in <strong>Hindi</strong> and <strong>English</strong></span>
+                  </li>
+                  <li className="flex gap-2.5">
+                    <span className="mt-0.5 shrink-0 text-saffron font-bold">2.</span>
+                    <span>You <strong>say that sentence in your Awadhi</strong>, translate it naturally</span>
+                  </li>
+                  <li className="flex gap-2.5">
+                    <span className="mt-0.5 shrink-0 text-saffron font-bold">3.</span>
+                    <span><strong>Do not read the Hindi as-is.</strong> Say it in your own Awadhi dialect</span>
+                  </li>
+                  <li className="flex gap-2.5">
+                    <span className="mt-0.5 shrink-0 text-saffron font-bold">4.</span>
+                    <span>Speak <strong>slowly and clearly</strong>, as you would explain something to a child</span>
+                  </li>
+                </ul>
+
+                <div className="mt-3 rounded-lg bg-cream p-3 border border-parchment">
+                  <p className="text-sm text-saffron-dark font-semibold">
+                    हिंदी वाक्य को वैसे का वैसे मत बोलिए, उसे अपनी अवधी में बोलिए।
+                  </p>
+                  <p className="text-xs text-slate mt-1">
+                    Don&apos;t repeat the Hindi sentence. Translate it into your Awadhi.
+                  </p>
+                </div>
+              </div>
+
+              {/* Metadata form */}
+              <div className="mt-6 space-y-3">
+                <div>
+                  <label htmlFor="onb-district" className="mb-1 block text-sm font-medium text-charcoal">
+                    Which district are you from? <span className="text-terracotta">*</span>
+                  </label>
+                  <select
+                    id="onb-district"
+                    value={district}
+                    onChange={(e) => setDistrict(e.target.value)}
+                    className="w-full rounded-lg border border-parchment bg-cream-dark/30 px-3 py-2.5 text-sm text-charcoal outline-none transition-colors focus:border-saffron/50"
+                  >
+                    <option value="">Select your district</option>
+                    {DISTRICTS.map((d) => (
+                      <option key={d} value={d}>{d}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  <div>
+                    <label htmlFor="onb-age" className="mb-1 block text-sm font-medium text-charcoal">
+                      Age group <span className="text-terracotta">*</span>
+                    </label>
+                    <select
+                      id="onb-age"
+                      value={ageGroup}
+                      onChange={(e) => setAgeGroup(e.target.value)}
+                      className="w-full rounded-lg border border-parchment bg-cream-dark/30 px-3 py-2.5 text-sm text-charcoal outline-none transition-colors focus:border-saffron/50"
+                    >
+                      <option value="">Select age group</option>
+                      {AGE_GROUPS.map((a) => (
+                        <option key={a} value={a}>{a}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="onb-gender" className="mb-1 block text-sm font-medium text-charcoal">
+                      Gender <span className="text-terracotta">*</span>
+                    </label>
+                    <select
+                      id="onb-gender"
+                      value={gender}
+                      onChange={(e) => setGender(e.target.value)}
+                      className="w-full rounded-lg border border-parchment bg-cream-dark/30 px-3 py-2.5 text-sm text-charcoal outline-none transition-colors focus:border-saffron/50"
+                    >
+                      <option value="">Select gender</option>
+                      {GENDERS.map((g) => (
+                        <option key={g} value={g}>{g}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              {/* Start button */}
+              <div className="mt-6 text-center">
+                <button
+                  type="button"
+                  onClick={completeOnboarding}
+                  disabled={!district || !ageGroup || !gender}
+                  className="inline-flex items-center gap-2 rounded-full bg-saffron px-8 py-3 text-base font-semibold text-cream transition-all hover:bg-saffron-dark disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                  </svg>
+                  Start Recording
+                </button>
+                <p className="mt-2 text-xs text-slate/60">
+                  Your details are saved locally and never shared publicly
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Sentence display */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -335,9 +503,7 @@ export default function VoiceRecorder() {
               height:
                 state === "recording"
                   ? Math.max(4, level * 80)
-                  : state === "recorded"
-                    ? 4
-                    : 4,
+                  : 4,
             }}
             transition={{ duration: 0.08, ease: "easeOut" }}
           />
@@ -375,7 +541,7 @@ export default function VoiceRecorder() {
               animate="animate"
               exit="exit"
               type="button"
-              onClick={startRecording}
+              onClick={handleMicClick}
               className="group flex h-20 w-20 items-center justify-center rounded-full bg-saffron text-cream shadow-lg transition-all duration-300 hover:bg-saffron-dark hover:shadow-xl active:scale-95"
             >
               <svg
@@ -516,7 +682,10 @@ export default function VoiceRecorder() {
 
         {/* Label under record button */}
         {state === "idle" && (
-          <p className="text-sm text-slate">Tap to start recording</p>
+          <div className="text-center">
+            <p className="text-sm text-slate">Tap to start recording</p>
+            <p className="mt-1 text-xs text-slate/60">धीरे और साफ़ बोलिए · Speak slowly and clearly</p>
+          </div>
         )}
         {state === "recording" && (
           <p className="text-sm text-slate">Tap the square to stop</p>
@@ -537,57 +706,21 @@ export default function VoiceRecorder() {
         )}
       </AnimatePresence>
 
-      {/* Metadata (collapsible) */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-        className="mt-10 rounded-xl border border-parchment/60 bg-cream-dark/40 p-6"
-      >
-        <p className="mb-4 text-sm font-medium text-charcoal-light">
-          Optional: help us track dialect variation
-        </p>
-
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <div>
-            <label htmlFor="district" className="mb-1 block text-xs text-slate">
-              Your district
-            </label>
-            <select
-              id="district"
-              value={district}
-              onChange={(e) => setDistrict(e.target.value)}
-              className="w-full rounded-lg border border-parchment bg-cream px-3 py-2 text-sm text-charcoal outline-none transition-colors focus:border-saffron/50"
-            >
-              <option value="">Select district</option>
-              {DISTRICTS.map((d) => (
-                <option key={d} value={d}>
-                  {d}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="age" className="mb-1 block text-xs text-slate">
-              Age group
-            </label>
-            <select
-              id="age"
-              value={ageGroup}
-              onChange={(e) => setAgeGroup(e.target.value)}
-              className="w-full rounded-lg border border-parchment bg-cream px-3 py-2 text-sm text-charcoal outline-none transition-colors focus:border-saffron/50"
-            >
-              <option value="">Select age group</option>
-              {AGE_GROUPS.map((a) => (
-                <option key={a} value={a}>
-                  {a}
-                </option>
-              ))}
-            </select>
-          </div>
+      {/* Compact metadata display (only when metadata is set) */}
+      {hasMetadata && (
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-3 text-xs text-slate">
+          <span className="rounded-full bg-parchment/40 px-3 py-1">{district}</span>
+          <span className="rounded-full bg-parchment/40 px-3 py-1">{ageGroup}</span>
+          <span className="rounded-full bg-parchment/40 px-3 py-1">{gender}</span>
+          <button
+            type="button"
+            onClick={() => setShowOnboarding(true)}
+            className="text-saffron-dark/70 underline underline-offset-2 hover:text-saffron-dark"
+          >
+            Edit
+          </button>
         </div>
-      </motion.div>
+      )}
 
       {/* Session progress */}
       <div className="mt-6 text-center">

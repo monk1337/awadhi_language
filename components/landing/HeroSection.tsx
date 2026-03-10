@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import AnimatedCounter from "@/components/landing/AnimatedCounter";
 import { ANIMATION_DEFAULTS } from "@/lib/constants";
@@ -65,6 +66,44 @@ export default function HeroSection() {
         >
           The language of Tulsidas, the Ramcharitmanas, and the Hanuman Chalisa.
         </motion.p>
+
+        {/* Contribute Voice CTA */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          transition={{
+            duration: 0.8,
+            delay: 1.2,
+            ease: ANIMATION_DEFAULTS.ease,
+          }}
+          className="mt-10"
+        >
+          <Link
+            href="/contribute-voice"
+            className="group relative inline-flex items-center gap-2.5 rounded-full bg-saffron px-8 py-3.5 text-base font-semibold text-cream transition-all duration-300 hover:bg-saffron-dark nav-glow"
+          >
+            <svg
+              className="h-5 w-5 transition-transform duration-300 group-hover:scale-110"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={1.5}
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+              />
+            </svg>
+            Contribute Your Voice
+            <span className="relative flex h-2 w-2">
+              <span className="signal-dot absolute inline-flex h-full w-full rounded-full" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-saffron" />
+            </span>
+          </Link>
+        </motion.div>
       </div>
 
       {/* Scroll-down indicator */}

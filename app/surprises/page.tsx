@@ -23,13 +23,16 @@ export default function SurprisesPage() {
       />
 
       {/* Bollywood image */}
-      <div className="mx-auto max-w-4xl overflow-hidden rounded-xl">
+      <figure className="mx-auto max-w-4xl overflow-hidden rounded-xl">
         <img
           src="/images/surprises/bollywood.webp"
           alt="Watercolor painting of Gabbar Singh from Sholay, iconic Bollywood villain who speaks Awadhi"
           className="h-auto w-full"
         />
-      </div>
+        <figcaption className="mt-3 text-center text-sm italic text-slate">
+          Nadiya Ke Paar (1982), a modest Awadhi-language film, was remade scene-for-scene as Hum Aapke Hain Koun (1994), Hindi cinema&apos;s highest-grossing film at the time.
+        </figcaption>
+      </figure>
 
       {/* Flip cards */}
       <FlipCardGrid />

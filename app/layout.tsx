@@ -4,6 +4,7 @@ import Navigation from "@/components/layout/Navigation";
 import SmoothScrollProvider from "@/components/layout/SmoothScrollProvider";
 import ScrollProgress from "@/components/layout/ScrollProgress";
 import Footer from "@/components/layout/Footer";
+import FloatingVoiceCTA from "@/components/layout/FloatingVoiceCTA";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
@@ -36,6 +37,7 @@ export default function RootLayout({
           <Navigation />
           <main className="min-h-screen">{children}</main>
           <Footer />
+          <FloatingVoiceCTA />
         </SmoothScrollProvider>
         <Analytics />
       </body>

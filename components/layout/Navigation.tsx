@@ -76,8 +76,22 @@ export default function Navigation() {
               );
             })}
             <div className="mx-1 h-5 w-px bg-parchment" />
+            <Link
+              href="/contribute-voice"
+              className={cn(
+                "relative flex items-center gap-2 px-3 py-2 text-sm font-semibold rounded-md transition-colors duration-200",
+                pathname === "/contribute-voice"
+                  ? "text-cream bg-saffron"
+                  : "text-saffron-dark bg-saffron/10 hover:bg-saffron/20 nav-glow"
+              )}
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="signal-dot absolute inline-flex h-full w-full rounded-full" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-saffron" />
+              </span>
+              Contribute Voice
+            </Link>
             {[
-              { href: "/contribute-voice", label: "Contribute Voice" },
               { href: "/open-source", label: "Open Source" },
               { href: "/about", label: "About" },
             ].map((link) => {
@@ -173,8 +187,37 @@ export default function Navigation() {
                 );
               })}
               <div className="my-2 mx-4 h-px bg-parchment/60" />
+              <motion.div
+                initial={{ opacity: 0, x: -16 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.3,
+                  delay: sections.length * 0.05,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
+                <Link
+                  href="/contribute-voice"
+                  className={cn(
+                    "flex items-center gap-3 px-4 py-3 rounded-lg text-base font-semibold transition-colors duration-200",
+                    pathname === "/contribute-voice"
+                      ? "text-cream bg-saffron"
+                      : "text-saffron-dark bg-saffron/10 nav-glow"
+                  )}
+                >
+                  <span className="relative flex h-2 w-2 shrink-0">
+                    <span className="signal-dot absolute inline-flex h-full w-full rounded-full" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-saffron" />
+                  </span>
+                  <span>
+                    <span className="block">Contribute Voice</span>
+                    <span className="block text-sm font-normal text-saffron-dark/70 mt-0.5">
+                      Help build Awadhi speech AI
+                    </span>
+                  </span>
+                </Link>
+              </motion.div>
               {[
-                { href: "/contribute-voice", label: "Contribute Voice", subtitle: "Help build Awadhi speech AI" },
                 { href: "/open-source", label: "Open Source", subtitle: "Contribute to this project" },
                 { href: "/about", label: "About Lucknow AI", subtitle: "The community behind this" },
               ].map((link, index) => {
@@ -186,7 +229,7 @@ export default function Navigation() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{
                       duration: 0.3,
-                      delay: (sections.length + index) * 0.05,
+                      delay: (sections.length + 1 + index) * 0.05,
                       ease: [0.22, 1, 0.36, 1],
                     }}
                   >

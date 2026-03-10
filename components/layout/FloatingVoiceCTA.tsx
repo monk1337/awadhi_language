@@ -9,8 +9,8 @@ export default function FloatingVoiceCTA() {
   const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(false);
 
-  // Don't show on the contribute-voice page itself
   const isContributePage = pathname === "/contribute-voice";
+  const isAdminPage = pathname === "/admin";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,7 +21,7 @@ export default function FloatingVoiceCTA() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  if (isContributePage) return null;
+  if (isContributePage || isAdminPage) return null;
 
   return (
     <AnimatePresence>
@@ -35,10 +35,10 @@ export default function FloatingVoiceCTA() {
         >
           <Link
             href="/contribute-voice"
-            className="group flex items-center gap-2 rounded-full bg-saffron px-5 py-3 text-sm font-semibold text-cream shadow-lg transition-all hover:bg-saffron-dark hover:shadow-xl"
+            className="group flex items-center gap-3 rounded-2xl bg-saffron px-5 py-3 shadow-lg transition-all hover:bg-saffron-dark hover:shadow-xl"
           >
             <svg
-              className="h-5 w-5"
+              className="h-5 w-5 text-cream"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -51,7 +51,14 @@ export default function FloatingVoiceCTA() {
                 d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
               />
             </svg>
-            <span className="hidden sm:inline">Contribute Your Voice</span>
+            <span className="hidden sm:flex sm:flex-col">
+              <span className="text-sm font-semibold text-cream">
+                Record Your Voice
+              </span>
+              <span className="text-[11px] text-cream/70">
+                Help build Awadhi speech AI
+              </span>
+            </span>
             <span className="relative flex h-2 w-2">
               <span className="signal-dot absolute inline-flex h-full w-full rounded-full" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-cream" />

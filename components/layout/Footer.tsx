@@ -4,6 +4,39 @@ import { sections } from "@/lib/constants";
 export default function Footer() {
   return (
     <footer className="bg-charcoal text-parchment">
+      {/* Voice CTA banner */}
+      <div className="border-b border-parchment/10 bg-charcoal-light">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 py-10 text-center sm:px-6 md:flex-row md:justify-between md:text-left lg:px-8">
+          <div>
+            <p className="font-playfair text-xl font-semibold text-cream">
+              Your voice can help preserve Awadhi
+            </p>
+            <p className="mt-1 text-sm text-parchment/60">
+              Record a few sentences in Awadhi. No signup, no app download. Just your voice and 2 minutes.
+            </p>
+          </div>
+          <Link
+            href="/contribute-voice"
+            className="flex shrink-0 items-center gap-2 rounded-full bg-saffron px-6 py-3 text-sm font-semibold text-cream transition-colors hover:bg-saffron-dark"
+          >
+            <svg
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+              />
+            </svg>
+            Start Recording
+          </Link>
+        </div>
+      </div>
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {/* Left column: Branding */}

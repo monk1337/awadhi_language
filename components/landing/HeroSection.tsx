@@ -81,26 +81,31 @@ export default function HeroSection() {
         >
           <Link
             href="/contribute-voice"
-            className="group relative inline-flex items-center gap-2.5 rounded-full bg-saffron px-8 py-3.5 text-base font-semibold text-cream transition-all duration-300 hover:bg-saffron-dark nav-glow"
+            className="group relative inline-flex flex-col items-center gap-1 rounded-2xl bg-saffron px-8 py-4 text-center transition-all duration-300 hover:bg-saffron-dark nav-glow"
           >
-            <svg
-              className="h-5 w-5 transition-transform duration-300 group-hover:scale-110"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={1.5}
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
-              />
-            </svg>
-            Contribute Your Voice
-            <span className="relative flex h-2 w-2">
-              <span className="signal-dot absolute inline-flex h-full w-full rounded-full" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-saffron" />
+            <span className="flex items-center gap-2.5 text-base font-semibold text-cream">
+              <svg
+                className="h-5 w-5 transition-transform duration-300 group-hover:scale-110"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={1.5}
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+                />
+              </svg>
+              Contribute Your Voice
+              <span className="relative flex h-2 w-2">
+                <span className="signal-dot absolute inline-flex h-full w-full rounded-full" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-cream" />
+              </span>
+            </span>
+            <span className="text-xs text-cream/80">
+              Record Awadhi sentences to help build speech AI
             </span>
           </Link>
         </motion.div>

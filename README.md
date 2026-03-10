@@ -2,7 +2,7 @@
 
 A comprehensive, interactive website documenting the history, literature, culture, and linguistic heritage of Awadhi, one of North India's oldest literary languages spoken by over 38 million people.
 
-**Live site:** [awadhi.vercel.app](https://awadhi.vercel.app)
+**Live site:** [awadhi-language.vercel.app](https://awadhi-language.vercel.app)
 
 ## About
 

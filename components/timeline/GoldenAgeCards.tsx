@@ -19,7 +19,7 @@ const works: GoldenAgeWork[] = [
     work: "Chandayan",
     author: "Maulana Da'ud",
     description:
-      "The first major Awadhi literary work. Inaugurates the Sufi premakhyan tradition -- Eastern Sufis choosing Awadhi to reach common people with Hindu love stories infused with Sufi mysticism.",
+      "The first major Awadhi literary work. Inaugurates the Sufi premakhyan tradition: Eastern Sufis choosing Awadhi to reach common people with Hindu love stories infused with Sufi mysticism.",
     stream: "sufi",
   },
   {
@@ -123,7 +123,7 @@ export default function GoldenAgeCards() {
     <section className="py-16 md:py-24">
       <SectionHeading
         title="The Golden Age"
-        subtitle="From 1379 to 1625, two great literary streams flowed through Awadhi -- Sufi mystics writing Hindu love stories, and Bhakti poets retelling sacred epics. Muslim and Hindu traditions chose the same language."
+        subtitle="From 1379 to 1625, two great literary streams flowed through Awadhi: Sufi mystics writing Hindu love stories, and Bhakti poets retelling sacred epics. Muslim and Hindu traditions chose the same language."
         align="center"
       />
 

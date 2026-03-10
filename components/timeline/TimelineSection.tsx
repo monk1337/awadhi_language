@@ -22,7 +22,7 @@ const events: TimelineEventData[] = [
     year: "1379",
     title: "Chandayan by Maulana Da'ud",
     description:
-      "The first major literary work in Awadhi inaugurates the Sufi premakhyan tradition -- Eastern Sufis choosing Awadhi to reach common people with Hindu love stories infused with Sufi philosophy.",
+      "The first major literary work in Awadhi inaugurates the Sufi premakhyan tradition: Eastern Sufis choosing Awadhi to reach common people with Hindu love stories infused with Sufi philosophy.",
     highlight: true,
   },
   {
@@ -49,39 +49,7 @@ const events: TimelineEventData[] = [
     year: "1800",
     title: "Fort William College chooses Khari Boli",
     description:
-      "The British East India Company's Fort William College selects Khari Boli -- not Awadhi -- as the basis for a standardized \"Hindustani.\" A decision that would reshape the linguistic destiny of half a billion people.",
-    highlight: true,
-  },
-  {
-    year: "1837",
-    title: "British abolish Persian in courts",
-    description:
-      "The colonial administration replaces Persian with local vernaculars in courts, further entrenching the standardization process that sidelines Awadhi in favor of Khari Boli-based Hindi/Urdu.",
-  },
-  {
-    year: "1857",
-    title: "Rebellion suppressed, Awadh annexed",
-    description:
-      "The great rebellion, centered in Awadh, is crushed. British colonial restructuring accelerates the erasure of Awadhi political and cultural autonomy.",
-  },
-  {
-    year: "1893",
-    title: "Nagari Pracharini Sabha founded",
-    description:
-      "The Hindi promotion society is established in Varanasi, beginning the organized movement for Hindi supremacy that would systematically subsume Awadhi and other regional languages.",
-  },
-  {
-    year: "1950",
-    title: "Hindi declared official language",
-    description:
-      "India's constitution declares Hindi (based on Khari Boli) the official language. Awadhi is classified as a dialect under the Hindi umbrella, losing its claim to independent identity.",
-    highlight: true,
-  },
-  {
-    year: "1971",
-    title: "48 languages absorbed under Hindi",
-    description:
-      "The census reclassification absorbs 48 distinct languages -- including Awadhi, Bhojpuri, and Rajasthani -- under \"Hindi.\" The reported speaker count jumps from 30.39% to 43.63% overnight.",
+      "The British East India Company's Fort William College selects Khari Boli, not Awadhi, as the basis for a standardized \"Hindustani.\" A decision that would reshape the linguistic destiny of half a billion people.",
     highlight: true,
   },
 ];
@@ -91,7 +59,7 @@ export default function TimelineSection() {
     <section className="py-16 md:py-24">
       <SectionHeading
         title="The Full Timeline"
-        subtitle="From sacred plains to statistical erasure"
+        subtitle="From Prakrit roots to literary golden age"
         align="center"
       />
 

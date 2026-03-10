@@ -16,7 +16,7 @@ const categoryLabels: Record<DataMetric["category"], string> = {
   media: "Media",
   digital: "Digital",
   literary: "Literary",
-  government: "Government",
+  government: "Classification",
   demographics: "Demographics",
 };
 

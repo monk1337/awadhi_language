@@ -21,7 +21,7 @@ export interface TimelineEvent {
   title: string;
   description: string;
   significance?: "major" | "minor" | "turning-point";
-  category?: "literary" | "political" | "cultural" | "linguistic";
+  category?: "literary" | "cultural" | "linguistic";
 }
 
 // ---------------------------------------------------------------------------
@@ -139,40 +139,6 @@ export interface CuisineTerm {
 }
 
 // ---------------------------------------------------------------------------
-// Crisis & politics
-// ---------------------------------------------------------------------------
-
-export interface PoliticalEvent {
-  year: string;
-  title: string;
-  description: string;
-  impact: "positive" | "negative" | "neutral";
-  category?: "policy" | "movement" | "legislation" | "census" | "media";
-}
-
-export interface ForceOfErasure {
-  id: string;
-  title: string;
-  description: string;
-  icon?: string;
-  stats?: Array<{ label: string; value: string }>;
-  examples?: string[];
-}
-
-// ---------------------------------------------------------------------------
-// Digital & revival
-// ---------------------------------------------------------------------------
-
-export interface DigitalLifeline {
-  name: string;
-  type: "app" | "website" | "social-media" | "publication" | "broadcast" | "organization";
-  url?: string;
-  description: string;
-  reach?: string;
-  founded?: string;
-}
-
-// ---------------------------------------------------------------------------
 // Data & statistics
 // ---------------------------------------------------------------------------
 
@@ -188,13 +154,6 @@ export interface DataMetric {
     | "literary"
     | "government"
     | "demographics";
-}
-
-export interface EighthScheduleLanguage {
-  name: string;
-  speakers: number;
-  yearAdded: number;
-  isScheduled: boolean;
 }
 
 export interface EuropeanLanguage {

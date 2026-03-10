@@ -5,14 +5,14 @@ import RevealOnScroll from "@/components/shared/RevealOnScroll";
 
 const flipCards = [
   {
-    front: "Hundreds of millions chant Awadhi daily -- and don't know it",
+    front: "Hundreds of millions chant Awadhi daily, and don't know it",
     back: "The Hanuman Chalisa, recited daily by an estimated 100 million+ Hindus worldwide, is written entirely in Awadhi by Tulsidas. Most devotees assume it is Sanskrit or Hindi.",
     category: "Religion",
   },
   {
-    front: "Official in Fiji, invisible in India",
-    back: "Fiji Hindi -- a creole descended largely from Awadhi and Bhojpuri brought by indentured laborers -- is an official language of Fiji (pop. 900,000). In India, Awadhi has no official status whatsoever for its 38 million speakers.",
-    category: "Politics",
+    front: "Official in Fiji, a dialect in India",
+    back: "Fiji Hindi, a creole descended largely from Awadhi and Bhojpuri brought by indentured laborers, is an official language of Fiji (pop. 900,000). In India, Awadhi is classified as a mother tongue under Hindi.",
+    category: "Global",
   },
   {
     front: "Hindi-Urdu has Awadhi DNA",
@@ -25,13 +25,13 @@ const flipCards = [
     category: "History",
   },
   {
-    front: "A Padma Shri for a language the government doesn't recognize",
-    back: "Dr. Vidya Vindu Singh received India's Padma Shri in 2022 for her contributions to Awadhi literature -- the same government that refuses to recognize Awadhi as an independent language honored someone for writing in it.",
-    category: "Paradox",
+    front: "A Padma Shri for Awadhi literature",
+    back: "Dr. Vidya Vindu Singh received India's Padma Shri in 2022 for her contributions to Awadhi literature, a recognition of the language's rich literary tradition.",
+    category: "Literature",
   },
   {
-    front: "The script that dominated North India -- and vanished",
-    back: "Kaithi script once had three times more textbooks than Devanagari in Bihar and eastern UP. The British chose Devanagari for administrative convenience, and within decades Kaithi disappeared -- taking with it the evidence that millions had been literate in something other than Hindi.",
+    front: "The script that dominated North India, and vanished",
+    back: "Kaithi script once had three times more textbooks than Devanagari in Bihar and eastern UP. The British chose Devanagari for administrative convenience, and within decades Kaithi disappeared, taking with it the evidence that millions had been literate in something other than Hindi.",
     category: "Scripts",
   },
   {
@@ -41,7 +41,7 @@ const flipCards = [
   },
   {
     front: "An Awadhi epic was written in a British prison",
-    back: "Krishnayan (1942), an Awadhi mahakavya (epic poem), was composed by Dwarika Prasad Mishra while imprisoned by the British during the Quit India Movement. The colonizers jailed the poet; the language endured.",
+    back: "Krishnayan (1942), an Awadhi mahakavya (epic poem), was composed by Dwarika Prasad Mishra while imprisoned by the British during the Quit India Movement.",
     category: "Literature",
   },
 ] as const;

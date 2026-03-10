@@ -33,7 +33,7 @@ export const folkSongs: FolkSong[] = [
     lyrics: "Ras barse badariya sawan ki",
     translation: "Clouds of the rain are pouring nectar",
     description:
-      "Expressing both the joy of rain and the ache of romantic separation -- the woman longing for her beloved during the season when the world is wet and green and impossibly alive. Uses looming clouds and rain as metaphors for separation, fertility, and desire. The classical singer Girija Devi was among Kajri's greatest interpreters.",
+      "Expressing both the joy of rain and the ache of romantic separation: the woman longing for her beloved during the season when the world is wet and green and impossibly alive. Uses looming clouds and rain as metaphors for separation, fertility, and desire. The classical singer Girija Devi was among Kajri's greatest interpreters.",
     region: "Awadh",
   },
   {
@@ -65,7 +65,7 @@ export const folkSongs: FolkSong[] = [
     genre: "Wedding insult song",
     occasion: "Weddings",
     description:
-      "Playful, poetic wedding insults -- a specific oral tradition being lost as linguistic context disappears. Women sing teasing, humorous verses about the groom's family.",
+      "Playful, poetic wedding insults, a specific oral tradition being lost as linguistic context disappears. Women sing teasing, humorous verses about the groom's family.",
     region: "Awadh",
   },
 ];

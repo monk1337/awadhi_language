@@ -15,7 +15,7 @@ export default function Footer() {
               Awadhi
             </Link>
             <p className="mt-4 font-cormorant text-xl italic text-parchment/80 leading-relaxed">
-              38 million voices. Zero recognition.
+              38 million voices. One extraordinary heritage.
             </p>
           </div>
 
@@ -43,8 +43,21 @@ export default function Footer() {
               About This Project
             </h3>
             <p className="text-sm text-parchment/70 leading-relaxed">
-              This website tells the story of one of the world&apos;s largest
-              undercounted languages.
+              This website tells the story of Awadhi: its history,
+              literature, culture, and living heritage.
+            </p>
+            <p className="mt-4 text-sm text-parchment/70 leading-relaxed">
+              Built by{" "}
+              <a
+                href="https://lucknowai.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-saffron hover:text-saffron-light transition-colors duration-200 underline underline-offset-2"
+              >
+                Lucknow AI Labs
+              </a>
+              {" "}&{" "}
+              <span className="text-parchment/90">Uttar Pradesh AI Labs</span>
             </p>
           </div>
         </div>

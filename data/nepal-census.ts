@@ -22,7 +22,7 @@ export const decadalGrowthPercent = Math.round(
 
 /**
  * Nepal's Language Commission has recommended Awadhi as an official
- * language of Lumbini Province -- the province containing the
+ * language of Lumbini Province, the province containing the
  * birthplace of the Buddha.
  */
 export const nepalRecognitionStatus = {

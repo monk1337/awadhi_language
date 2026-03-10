@@ -32,7 +32,7 @@ export const phrases: Phrase[] = [
   {
     awadhi: "Ka ho, ghar-baar sab theek hai na?",
     devanagari: "\u0915\u093E \u0939\u094B, \u0918\u0930-\u092C\u093E\u0930 \u0938\u092C \u0920\u0940\u0915 \u0939\u0948 \u0928\u093E?",
-    english: "So hey -- home and family all okay, right?",
+    english: "So hey, home and family all okay, right?",
     vibe: "Warm, domestic check-in",
   },
   {

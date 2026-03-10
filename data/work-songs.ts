@@ -2,7 +2,7 @@ import type { WorkSong } from "@/types";
 
 /**
  * Awadhi work songs from Part 6 of the master report.
- * The entire rhythm of agricultural life once had its own soundtrack -- in Awadhi.
+ * The entire rhythm of agricultural life once had its own soundtrack, in Awadhi.
  */
 export const workSongs: WorkSong[] = [
   {

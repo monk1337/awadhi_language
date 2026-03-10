@@ -62,7 +62,7 @@ export const migrationRoutes: MigrationRoute[] = [
     reason: "Sugar plantation labor",
     population: 60_965,
     description:
-      "34.5% of indentured laborers were Awadhi speakers -- the single largest linguistic group. Fiji Hindi is now an official language (since 1997), recognized by constitution and used in parliament.",
+      "34.5% of indentured laborers were Awadhi speakers, the single largest linguistic group. Fiji Hindi is now an official language (since 1997), recognized by constitution and used in parliament.",
   },
   {
     origin: "Awadh Region, UP",

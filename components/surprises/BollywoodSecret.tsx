@@ -28,7 +28,7 @@ export default function BollywoodSecret() {
               A modest Awadhi-language film set in rural Awadh became a sleeper hit.
               Twelve years later, it was remade scene-for-scene as{" "}
               <strong className="text-charcoal">Hum Aapke Hain Koun (1994)</strong>{" "}
-              -- which became Hindi cinema&apos;s highest-grossing film at the time. The
+              , which became Hindi cinema&apos;s highest-grossing film at the time. The
               Awadhi original provided the entire blueprint. The Hindi remake got
               the credit.
             </p>
@@ -46,7 +46,7 @@ export default function BollywoodSecret() {
             </h4>
             <p className="mt-2 text-sm leading-relaxed text-slate">
               India&apos;s most iconic villain speaks Awadhi dialect. His speech
-              patterns -- modeled on the eastern UP countryside -- come directly
+              patterns, modeled on the eastern UP countryside, come directly
               from Dilip Kumar&apos;s{" "}
               <strong className="text-charcoal">Gunga Jumna (1961)</strong>, a
               landmark film in authentic Awadhi/Bhojpuri. Every Indian quoting

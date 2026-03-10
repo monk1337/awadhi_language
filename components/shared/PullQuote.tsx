@@ -27,7 +27,7 @@ export default function PullQuote({
         </p>
         {attribution && (
           <footer className="mt-4 text-base text-slate">
-            &mdash; {attribution}
+            {attribution}
           </footer>
         )}
       </blockquote>

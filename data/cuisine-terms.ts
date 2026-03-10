@@ -10,7 +10,7 @@ export const cuisineTerms: CuisineTerm[] = [
     name: "Dum Pukht",
     nameDevanagari: "\u0926\u092E \u092A\u0941\u0916\u094D\u0924",
     description:
-      "\"Breathe in + cook\" -- slow-cooking in a sealed pot over low fire. Attributed to Nawab Asaf-ud-Daula around 1784. Ingredients sealed with dough, cooked gently in their own trapped vapors. The foundational technique of Awadhi cuisine.",
+      "\"Breathe in + cook\": slow-cooking in a sealed pot over low fire. Attributed to Nawab Asaf-ud-Daula around 1784. Ingredients sealed with dough, cooked gently in their own trapped vapors. The foundational technique of Awadhi cuisine.",
     category: "technique",
     region: "Lucknow",
   },
@@ -18,7 +18,7 @@ export const cuisineTerms: CuisineTerm[] = [
     name: "Galawat",
     nameDevanagari: "\u0917\u0932\u093E\u0935\u091F",
     description:
-      "The art of extreme tenderization -- meat that melts on the tongue. Born from the legend of a toothless Nawab who demanded kebabs he could eat without teeth. Led to the Galouti kebab with its 150+ spice blend. No English equivalent exists for this concept.",
+      "The art of extreme tenderization: meat that melts on the tongue. Born from the legend of a toothless Nawab who demanded kebabs he could eat without teeth. Led to the Galouti kebab with its 150+ spice blend. No English equivalent exists for this concept.",
     category: "technique",
     region: "Lucknow",
   },
@@ -58,7 +58,7 @@ export const cuisineTerms: CuisineTerm[] = [
     name: "Rumali Roti",
     nameDevanagari: "\u0930\u0942\u092E\u093E\u0932\u0940 \u0930\u094B\u091F\u0940",
     description:
-      "Bread thrown and stretched until thin as a handkerchief (rumal). The name literally means 'handkerchief bread' -- a testament to the skill of Awadhi bakers.",
+      "Bread thrown and stretched until thin as a handkerchief (rumal). The name literally means 'handkerchief bread,' a testament to the skill of Awadhi bakers.",
     category: "dish",
     region: "Lucknow",
   },
@@ -66,7 +66,7 @@ export const cuisineTerms: CuisineTerm[] = [
     name: "Bawarchi",
     nameDevanagari: "\u092C\u093E\u0935\u0930\u094D\u091A\u0940",
     description:
-      "Chef -- a general cook. Distinct from a Rakabdar in the Awadhi culinary hierarchy. The Awadhi kitchen distinguished between cooking and the art of cooking.",
+      "Chef, a general cook. Distinct from a Rakabdar in the Awadhi culinary hierarchy. The Awadhi kitchen distinguished between cooking and the art of cooking.",
     category: "utensil", // role, but using closest available category
     region: "Lucknow",
   },
@@ -74,7 +74,7 @@ export const cuisineTerms: CuisineTerm[] = [
     name: "Rakabdar",
     nameDevanagari: "\u0930\u0915\u093E\u092C\u0926\u093E\u0930",
     description:
-      "Gourmet specialist -- distinct from a Bawarchi. Awadhi dining culture distinguished between a cook and the artist of cooking. The Rakabdar was responsible for presentation, flavor refinement, and the art of the dastarkhwan.",
+      "Gourmet specialist, distinct from a Bawarchi. Awadhi dining culture distinguished between a cook and the artist of cooking. The Rakabdar was responsible for presentation, flavor refinement, and the art of the dastarkhwan.",
     category: "utensil", // role, but using closest available category
     region: "Lucknow",
   },

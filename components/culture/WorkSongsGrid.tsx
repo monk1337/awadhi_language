@@ -70,7 +70,7 @@ export default function WorkSongsGrid() {
         {/* Footer text */}
         <p className="mx-auto max-w-3xl text-center font-quote text-lg leading-relaxed text-slate md:text-xl">
           &ldquo;The entire rhythm of agricultural life once had its own
-          soundtrack &mdash; in Awadhi.&rdquo;
+          soundtrack, in Awadhi.&rdquo;
         </p>
       </div>
     </RevealOnScroll>

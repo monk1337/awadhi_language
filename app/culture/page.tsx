@@ -23,6 +23,13 @@ export default function CulturePage() {
           title="Living Culture"
           subtitle="A song for every season"
         />
+        <div className="mx-auto max-w-4xl overflow-hidden rounded-xl">
+          <img
+            src="/images/culture/folk-music.webp"
+            alt="Women singing Awadhi folk songs during monsoon season in a village courtyard"
+            className="h-auto w-full"
+          />
+        </div>
         <SeasonalSongWheel />
       </section>
 
@@ -45,8 +52,26 @@ export default function CulturePage() {
           title="The Dastarkhwan"
           subtitle="The vocabulary of Awadhi cuisine"
         />
+        <div className="mx-auto max-w-4xl overflow-hidden rounded-xl">
+          <img
+            src="/images/culture/cuisine.webp"
+            alt="Traditional Awadhi feast with biryani, galouti kebabs, sheermal, and korma on a brass thali"
+            className="h-auto w-full"
+          />
+        </div>
         <CuisineTerms />
       </section>
+
+      <Divider />
+
+      {/* Ramlila + Proverbs */}
+      <div className="mx-auto max-w-4xl overflow-hidden rounded-xl">
+        <img
+          src="/images/culture/ramlila.webp"
+          alt="Traditional Ramlila performance at dusk in Varanasi"
+          className="h-auto w-full"
+        />
+      </div>
 
       <Divider />
 
@@ -63,7 +88,7 @@ export default function CulturePage() {
 
       {/* Closing quote */}
       <PullQuote
-        quote="Pehle aap -- in those two words lives an entire civilization's commitment to grace, patience, and putting the other person first. That is tehzeeb. And tehzeeb speaks Awadhi."
+        quote="Pehle aap: in those two words lives an entire civilization's commitment to grace, patience, and putting the other person first. That is tehzeeb. And tehzeeb speaks Awadhi."
       />
     </PageWrapper>
   );

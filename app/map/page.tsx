@@ -26,6 +26,15 @@ export default function MapPage() {
           subtitle="From Ayodhya to Fiji"
         />
 
+        {/* ---- Landscape image ---- */}
+        <div className="mx-auto max-w-4xl overflow-hidden rounded-xl">
+          <img
+            src="/images/heroes/awadh-landscape.webp"
+            alt="Watercolor landscape of the Awadh heartland with rivers, fields, and distant temple spires"
+            className="h-auto w-full"
+          />
+        </div>
+
         {/* ---- India / UP Map ---- */}
         <section>
           <RevealOnScroll>
@@ -110,7 +119,7 @@ export default function MapPage() {
 
         {/* ---- Closing pull quote ---- */}
         <PullQuote
-          quote="A foreign country is moving faster than India to recognize a language born on Indian soil."
+          quote="From the banks of the Saryu to the sugarcane fields of Fiji, Awadhi has traveled farther than most languages ever will."
         />
       </div>
     </PageWrapper>

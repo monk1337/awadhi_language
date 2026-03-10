@@ -20,6 +20,8 @@ interface GiantProfileProps {
   quote?: string;
   quoteAttribution?: string;
   significance?: string;
+  imageSrc?: string;
+  imageAlt?: string;
   className?: string;
 }
 
@@ -32,26 +34,44 @@ export default function GiantProfile({
   quote,
   quoteAttribution,
   significance,
+  imageSrc,
+  imageAlt,
   className,
 }: GiantProfileProps) {
   return (
     <RevealOnScroll>
       <div className={cn("space-y-8", className)}>
-        {/* Header area with saffron accent */}
-        <div className="border-l-4 border-saffron pl-6">
-          <h3 className="font-playfair text-3xl font-bold text-charcoal md:text-4xl lg:text-5xl">
-            {name}
-          </h3>
-          <p className="mt-2 font-data text-base text-slate">{dates}</p>
-          <p className="mt-1 font-quote text-xl text-saffron-dark md:text-2xl">
-            {title}
-          </p>
-        </div>
+        {/* Header with optional portrait */}
+        <div className="flex flex-col gap-8 md:flex-row md:items-start">
+          {/* Portrait */}
+          {imageSrc && (
+            <div className="shrink-0 mx-auto md:mx-0">
+              <img
+                src={imageSrc}
+                alt={imageAlt || name}
+                className="h-auto w-48 rounded-lg border-2 border-parchment shadow-lg md:w-56"
+              />
+            </div>
+          )}
 
-        {/* Achievement prose */}
-        <p className="max-w-3xl text-lg leading-relaxed text-charcoal-light md:text-xl">
-          {achievement}
-        </p>
+          <div className="space-y-4">
+            {/* Header area with saffron accent */}
+            <div className="border-l-4 border-saffron pl-6">
+              <h3 className="font-playfair text-3xl font-bold text-charcoal md:text-4xl lg:text-5xl">
+                {name}
+              </h3>
+              <p className="mt-2 font-data text-base text-slate">{dates}</p>
+              <p className="mt-1 font-quote text-xl text-saffron-dark md:text-2xl">
+                {title}
+              </p>
+            </div>
+
+            {/* Achievement prose */}
+            <p className="max-w-3xl text-lg leading-relaxed text-charcoal-light md:text-xl">
+              {achievement}
+            </p>
+          </div>
+        </div>
 
         {/* Quote */}
         {quote && (
@@ -61,7 +81,7 @@ export default function GiantProfile({
             </p>
             {quoteAttribution && (
               <footer className="mt-3 text-sm text-slate">
-                &mdash; {quoteAttribution}
+                {quoteAttribution}
               </footer>
             )}
           </blockquote>

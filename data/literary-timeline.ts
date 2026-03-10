@@ -20,7 +20,7 @@ export const literaryTimeline: LiteraryWork[] = [
     period: "Golden Age",
     genre: "Sufi premakhyan (romance)",
     significance:
-      "First major Awadhi literary work. Inaugurates the premakhyan tradition -- Eastern Sufis choosing Awadhi to reach common people.",
+      "First major Awadhi literary work. Inaugurates the premakhyan tradition: Eastern Sufis choosing Awadhi to reach common people.",
   },
   {
     title: "Mirigavati",
@@ -73,7 +73,7 @@ export const literaryTimeline: LiteraryWork[] = [
     period: "Modern",
     genre: "Epic poetry",
     significance:
-      "Awadhi epic written in a British prison during the freedom movement. Freedom fighters sang Awadhi chaupais as cultural resistance.",
+      "Awadhi epic written in a British prison during the freedom movement. A notable example of Awadhi literary tradition continuing in challenging circumstances.",
   },
   {
     title: "Akashvani radio plays",
@@ -99,7 +99,7 @@ export const literaryTimeline: LiteraryWork[] = [
     period: "Contemporary",
     genre: "Literary career / recognition",
     significance:
-      "India's highest civilian honor for a language it refuses to recognize. The government simultaneously honors excellence in Awadhi and denies Awadhi status as a language.",
+      "India's Padma Shri awarded for lifetime contributions to Awadhi literature, recognizing the language's rich literary heritage.",
   },
 ];
 

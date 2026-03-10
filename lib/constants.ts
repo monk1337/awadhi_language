@@ -9,7 +9,7 @@ export const sections: Section[] = [
     stat: "1379 CE",
     statLabel: "First major literary work",
     description:
-      "Trace Awadhi from its Prakrit roots through its golden age to its political sidelining. A story of prestige, power, and erasure.",
+      "Trace Awadhi from its Prakrit roots through its golden age of literature and beyond.",
   },
   {
     id: "map",
@@ -52,34 +52,14 @@ export const sections: Section[] = [
       "Festivals, folk songs, cuisine, and proverbs that form the living texture of Awadhi identity.",
   },
   {
-    id: "crisis",
-    title: "The Disappearing Act",
-    path: "/crisis",
-    subtitle: "Five forces of erasure",
-    stat: "0",
-    statLabel: "Awadhi-medium schools",
-    description:
-      "Education policy, media dominance, urbanization, political apathy, and social stigma are systematically dismantling Awadhi.",
-  },
-  {
-    id: "fight",
-    title: "The Fight to Save It",
-    path: "/fight",
-    subtitle: "The $10 billion paradox",
-    stat: "38+",
-    statLabel: "Languages seeking recognition",
-    description:
-      "The Eighth Schedule campaign, digital activism, and grassroots movements fighting for Awadhi survival.",
-  },
-  {
     id: "data",
     title: "The Data Wall",
     path: "/data",
-    subtitle: "What we know. What no one bothered to find out.",
-    stat: "1,530\u00D7",
-    statLabel: "Larger than Sanskrit",
+    subtitle: "What we know. What remains to be studied.",
+    stat: "38M",
+    statLabel: "Speakers worldwide",
     description:
-      "Census gaps, missing metrics, and the statistical invisibility of a language spoken by 38 million people.",
+      "Census data, available metrics, and research gaps for a language spoken by 38 million people.",
   },
   {
     id: "surprises",

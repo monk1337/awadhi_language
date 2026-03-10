@@ -11,7 +11,7 @@ export const bollywoodSongs: BollywoodSong[] = [
     film: "Silsila",
     year: 1981,
     awadhiElements: "Awadhi Holi anthem; folk melody and dialect throughout",
-    description: "Amitabh Bachchan's legendary Holi anthem -- one of the most iconic festival songs in Indian cinema.",
+    description: "Amitabh Bachchan's legendary Holi anthem, one of the most iconic festival songs in Indian cinema.",
   },
   {
     title: "Mere Angne Mein Tumhara Kya Kaam Hai",
@@ -88,7 +88,7 @@ export const bollywoodSongs: BollywoodSong[] = [
     title: "Full film in Awadhi/Bhojpuri dialect",
     film: "Gunga Jumna",
     year: 1961,
-    awadhiElements: "Authentic Awadhi/Bhojpuri -- redefined Indian cinema",
+    awadhiElements: "Authentic Awadhi/Bhojpuri; redefined Indian cinema",
     description:
       "Dilip Kumar's landmark film using authentic Awadhi/Bhojpuri dialect. Became the blueprint for the 'Angry Young Man' era of 1970s Bollywood, including Gabbar Singh's speech patterns in Sholay (1975).",
   },

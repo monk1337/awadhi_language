@@ -17,14 +17,14 @@ export const proverbs: Proverb[] = [
     awadhi: "Jab aawe santosh dhana, sab dhana dhoori samaan",
     literal: "When the wealth of contentment arrives, all other wealth is like dust.",
     meaning:
-      "Spiritual wisdom from the Ramcharitmanas -- material wealth pales before inner peace.",
+      "Spiritual wisdom from the Ramcharitmanas: material wealth pales before inner peace.",
     context: "spirituality",
   },
   {
     awadhi: "Subah-e-Benares, Sham-e-Awadh, Shab-e-Malwa",
     literal: "Mornings of Benares, evenings of Awadh, nights of Malwa.",
     meaning:
-      "Celebrates the sublime character of each region -- each time of day has its own cultural geography.",
+      "Celebrates the sublime character of each region; each time of day has its own cultural geography.",
     context: "culture",
   },
   {
@@ -34,7 +34,7 @@ export const proverbs: Proverb[] = [
     context: "wisdom",
   },
   {
-    awadhi: "Is duniya mein teen qasai -- pisu, khatmal, Brahman bhai",
+    awadhi: "Is duniya mein teen qasai: pisu, khatmal, Brahman bhai",
     literal: "Three bloodsuckers: the flea, the bedbug, and the Brahmin.",
     meaning:
       "Sharp caste critique revealing deep tension between revered ritual status and actual social behavior.",
@@ -43,7 +43,7 @@ export const proverbs: Proverb[] = [
   {
     awadhi: "Door ke dhol suhavane lagte hain",
     literal: "Distant drums sound pleasant.",
-    meaning: "The grass is always greener -- a warning against romanticizing migration.",
+    meaning: "The grass is always greener. A warning against romanticizing migration.",
     context: "wisdom",
   },
   {
@@ -55,7 +55,7 @@ export const proverbs: Proverb[] = [
   {
     awadhi: "Naach na jaane, aangan tedha",
     literal: "Can't dance, blames the crooked courtyard.",
-    meaning: "A poor worker blames their tools -- critique of avoiding responsibility.",
+    meaning: "A poor worker blames their tools. Critique of avoiding responsibility.",
     context: "humor",
   },
   {
@@ -67,7 +67,7 @@ export const proverbs: Proverb[] = [
   {
     awadhi: "Doodh ka jala chhachh bhi phoonk phoonk kar peeta hai",
     literal: "One burned by milk blows on buttermilk too.",
-    meaning: "Once bitten, twice shy -- excessive caution born of past pain.",
+    meaning: "Once bitten, twice shy. Excessive caution born of past pain.",
     context: "wisdom",
   },
   {
@@ -85,19 +85,19 @@ export const proverbs: Proverb[] = [
   {
     awadhi: "Dhobi ka kutta, na ghar ka na ghat ka",
     literal: "The washerman's dog belongs neither at home nor at the riverbank.",
-    meaning: "About those who belong nowhere -- caught between two worlds.",
+    meaning: "About those who belong nowhere, caught between two worlds.",
     context: "social",
   },
   {
     awadhi: "Jitni chadar ho, utna pair failao",
     literal: "Stretch your legs only as far as your blanket.",
-    meaning: "Live within your means -- an agrarian warning against debt.",
+    meaning: "Live within your means. An agrarian warning against debt.",
     context: "agrarian",
   },
   {
     awadhi: "Karat karat abhyas ke, jadmati hot sujan",
     literal: "Through continuous practice, even a dull mind becomes wise.",
-    meaning: "The value of perseverance -- central to agrarian communities.",
+    meaning: "The value of perseverance. Central to agrarian communities.",
     context: "perseverance",
   },
   {
@@ -121,7 +121,7 @@ export const proverbs: Proverb[] = [
   {
     awadhi: "Jekar kam ohi ka saje, aur kare to danda baje",
     literal: "Each task is best done by the one who knows it; if another tries, only a beating awaits.",
-    meaning: "Mind your own work -- practical village wisdom about expertise and staying in your lane.",
+    meaning: "Mind your own work. Practical village wisdom about expertise and staying in your lane.",
     context: "wisdom",
   },
 ];

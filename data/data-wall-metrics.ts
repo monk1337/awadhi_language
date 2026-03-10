@@ -4,8 +4,8 @@ import type { DataMetric } from "@/types";
  * The Data Wall from Part 9 of the master report.
  * A grid where each cell represents a piece of data.
  * Cells with confirmed data are filled in; cells where data doesn't exist
- * are blacked out with "NO DATA." The visual impact of blank cells
- * tells the story of neglect.
+ * are blacked out with "NO DATA." The blank cells highlight
+ * gaps in available research.
  */
 
 /** Metrics where data exists (hasData: true). */
@@ -95,14 +95,8 @@ export const knownMetrics: DataMetric[] = [
     category: "literary",
   },
   {
-    name: "Indian government classification",
-    value: "Mother tongue under Hindi (not a language)",
-    hasData: true,
-    category: "government",
-  },
-  {
     name: "ISO 639-3 code",
-    value: "awa (recognized as distinct language)",
+    value: "awa",
     hasData: true,
     category: "government",
   },
@@ -114,13 +108,7 @@ export const knownMetrics: DataMetric[] = [
   },
   {
     name: "Ethnologue classification",
-    value: "Level 5 (Developing) -- Stable, but 'direct evidence lacking'",
-    hasData: true,
-    category: "government",
-  },
-  {
-    name: "Official language of any Indian state",
-    value: "None",
+    value: "Level 5 (Developing)",
     hasData: true,
     category: "government",
   },
@@ -138,51 +126,5 @@ export const knownMetrics: DataMetric[] = [
   },
 ];
 
-/** Metrics where NO data exists -- the blank cells that tell the story of neglect. */
-export const unknownMetrics: DataMetric[] = [
-  {
-    name: "Systematic count of Awadhi-language books/publications",
-    value: "NO DATA",
-    hasData: false,
-    category: "literary",
-  },
-  {
-    name: "Social media analytics for Awadhi content",
-    value: "NO DATA",
-    hasData: false,
-    category: "digital",
-  },
-  {
-    name: "Intergenerational transmission studies",
-    value: "NO DATA",
-    hasData: false,
-    category: "demographics",
-  },
-  {
-    name: "Comprehensive language attitudes survey",
-    value: "NO DATA",
-    hasData: false,
-    category: "demographics",
-  },
-  {
-    name: "Systematic domain-loss documentation",
-    value: "NO DATA",
-    hasData: false,
-    category: "demographics",
-  },
-  {
-    name: "Comprehensive Awadhi corpus for computational linguistics",
-    value: "NO DATA",
-    hasData: false,
-    category: "digital",
-  },
-  {
-    name: "Awadhi-specific literacy rate",
-    value: "NO DATA (Ethnologue estimates 50-75%)",
-    hasData: false,
-    category: "education",
-  },
-];
-
-/** All metrics combined for the data wall visualization. */
-export const allMetrics: DataMetric[] = [...knownMetrics, ...unknownMetrics];
+/** All metrics for the data wall visualization. */
+export const allMetrics: DataMetric[] = knownMetrics;

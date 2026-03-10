@@ -15,7 +15,7 @@ export default function FlipCard({ front, back, category }: FlipCardProps) {
 
   return (
     <div
-      className="h-[200px] cursor-pointer [perspective:1000px]"
+      className="h-[280px] cursor-pointer [perspective:1000px] sm:h-[260px] lg:h-[320px]"
       onClick={() => setIsFlipped((prev) => !prev)}
       role="button"
       tabIndex={0}
@@ -62,16 +62,18 @@ export default function FlipCard({ front, back, category }: FlipCardProps) {
         {/* Back face */}
         <div
           className={cn(
-            "absolute inset-0 flex flex-col items-center justify-center gap-2 rounded-lg p-5",
+            "absolute inset-0 flex flex-col items-center gap-2 rounded-lg p-5",
             "bg-cream border-2 border-saffron/40",
             "[backface-visibility:hidden] [transform:rotateY(180deg)]",
           )}
         >
-          <p className="text-center text-sm leading-relaxed text-charcoal md:text-base">
-            {back}
-          </p>
+          <div className="flex flex-1 items-center overflow-y-auto">
+            <p className="text-center text-xs leading-relaxed text-charcoal sm:text-sm">
+              {back}
+            </p>
+          </div>
 
-          <span className="mt-auto text-[10px] text-slate-light">tap to flip back</span>
+          <span className="shrink-0 text-[10px] text-slate-light">tap to flip back</span>
         </div>
       </motion.div>
     </div>

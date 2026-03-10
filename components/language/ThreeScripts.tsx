@@ -36,11 +36,11 @@ const scripts: ScriptTab[] = [
     id: "kaithi",
     label: "Kaithi",
     description:
-      "A cursive script once used for commerce, court records, and everyday writing across north India. Efficient and practical -- the people's script.",
+      "A cursive script once used for commerce, court records, and everyday writing across north India. Efficient and practical, the people's script.",
     text: "\uD835\uDC26\uD835\uDC21\uD835\uDC2B\uD835\uDC22\uD835\uDC2B\uD835\uDC1A\uD835\uDC26\uD835\uDC1A\uD835\uDC1C\uD835\uDC21\uD835\uDC1A\uD835\uDC2B\uD835\uDC22\uD835\uDC2D\uD835\uDC1A\uD835\uDC26\uD835\uDC1A\uD835\uDC27\uD835\uDC1A\uD835\uDC2C\uD835\uDC1A",
     transliteration:
       "Shriramacharitamanasa grantha samana kavinha na koi",
-    note: "Kaithi rendering -- font unavailable in most browsers; shown in stylized placeholder",
+    note: "Kaithi rendering; font unavailable in most browsers; shown in stylized placeholder",
     fontClass: "font-mono italic",
     available: false,
   },
@@ -52,7 +52,7 @@ const scripts: ScriptTab[] = [
     text: "\u0634\u0631\u06CC \u0631\u0627\u0645 \u0686\u0631\u062A \u0645\u0627\u0646\u0633",
     transliteration:
       "Shriramacharitamanasa grantha samana kavinha na koi",
-    note: "Perso-Arabic rendering -- right-to-left; approximate transliteration shown",
+    note: "Perso-Arabic rendering; right-to-left; approximate transliteration shown",
     fontClass: "font-sans",
     available: false,
   },

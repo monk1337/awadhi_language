@@ -8,15 +8,15 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Awadhi — 38 Million Voices, Zero Recognition",
+    default: "Awadhi: The Story of 38 Million Speakers",
     template: "%s | Awadhi",
   },
   description:
-    "The story of Awadhi: a language spoken by 38 million people, with one of the richest literary traditions on Earth, yet denied official recognition by the country where it was born.",
+    "The story of Awadhi: a language spoken by 38 million people, with one of the richest literary traditions on Earth.",
   openGraph: {
-    title: "Awadhi — 38 Million Voices, Zero Recognition",
+    title: "Awadhi: The Story of 38 Million Speakers",
     description:
-      "A language spoken by more people than Danish, Norwegian, Finnish, Estonian, Icelandic, Welsh, and Basque combined — with zero government recognition.",
+      "Explore the history, literature, culture, and living heritage of one of North India's oldest literary languages.",
     type: "website",
     locale: "en_US",
   },

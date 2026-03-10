@@ -81,7 +81,7 @@ export default function NepalGrowthChart() {
         While Awadhi shrinks in India, it grows {decadalGrowthPercent}% in Nepal
       </h3>
       <p className="mb-8 text-sm text-slate">
-        Nepal Census data for Awadhi mother-tongue speakers (1991 -- 2021)
+        Nepal Census data for Awadhi mother-tongue speakers (1991–2021)
       </p>
 
       {/* Chart */}
@@ -167,7 +167,7 @@ export default function NepalGrowthChart() {
       <div className="mt-4 flex items-center justify-center gap-3">
         <div className="h-px flex-1 max-w-[80px] bg-gradient-to-r from-transparent to-saffron/40" />
         <span className="rounded-full border border-saffron/30 bg-saffron/10 px-4 py-1.5 font-data text-sm font-semibold text-saffron">
-          +{decadalGrowthPercent}% in one decade (2011--2021)
+          +{decadalGrowthPercent}% in one decade (2011–2021)
         </span>
         <div className="h-px flex-1 max-w-[80px] bg-gradient-to-l from-transparent to-saffron/40" />
       </div>

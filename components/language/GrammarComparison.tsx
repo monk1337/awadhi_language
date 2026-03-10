@@ -28,7 +28,7 @@ const grammarDiffs: GrammarDiff[] = [
   {
     title: "Different verb system",
     description:
-      "Verb conjugations diverge entirely. Awadhi uses \"ham\" (we) as the first-person singular -- a mark of communal identity.",
+      "Verb conjugations diverge entirely. Awadhi uses \"ham\" (we) as the first-person singular, a mark of communal identity.",
     hindi: {
       label: "First person singular",
       example: "main kar\u016B\u1E45",

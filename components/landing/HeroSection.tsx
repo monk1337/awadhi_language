@@ -11,7 +11,16 @@ const fadeUp = {
 
 export default function HeroSection() {
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-cream to-cream-dark px-6 py-20">
+    <section className="relative flex min-h-screen flex-col items-center justify-center px-6 py-20 overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0 -z-10">
+        <img
+          src="/images/heroes/hero-background.webp"
+          alt=""
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-cream/80" />
+      </div>
       <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
         {/* Primary stat: 38,000,000 */}
         <motion.div
@@ -39,28 +48,8 @@ export default function HeroSection() {
             ease: ANIMATION_DEFAULTS.ease,
           }}
         >
-          people speak a language their government says doesn&rsquo;t exist.
+          people speak Awadhi, one of the oldest literary languages of North India.
         </motion.p>
-
-        {/* Census contrast */}
-        <motion.div
-          className="mt-12 flex flex-col items-center gap-2"
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={{
-            duration: 0.8,
-            delay: 0.8,
-            ease: ANIMATION_DEFAULTS.ease,
-          }}
-        >
-          <span className="text-base text-slate md:text-lg">
-            According to India&rsquo;s census:
-          </span>
-          <span className="font-data text-2xl text-slate-light md:text-3xl">
-            3,850,906
-          </span>
-        </motion.div>
 
         {/* Tagline in Cormorant Garamond italic */}
         <motion.p
@@ -70,11 +59,11 @@ export default function HeroSection() {
           animate="visible"
           transition={{
             duration: 0.8,
-            delay: 1.2,
+            delay: 0.8,
             ease: ANIMATION_DEFAULTS.ease,
           }}
         >
-          The world&rsquo;s largest undercounted language.
+          The language of Tulsidas, the Ramcharitmanas, and the Hanuman Chalisa.
         </motion.p>
       </div>
 

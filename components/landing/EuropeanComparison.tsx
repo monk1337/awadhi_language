@@ -123,7 +123,7 @@ export default function EuropeanComparison() {
 
         {/* Footer text */}
         <p className="font-quote mt-6 text-center text-lg text-charcoal-light md:text-xl">
-          All seven have full government recognition. Awadhi has none.
+          Awadhi has more speakers than all seven of these languages combined.
         </p>
       </div>
     </RevealOnScroll>

@@ -55,8 +55,8 @@ export default function HanumanChalisaReveal() {
           className="font-quote max-w-2xl text-xl leading-relaxed text-charcoal-light md:text-2xl"
           variants={item}
         >
-          The Hanuman Chalisa &mdash; the most widely recited Hindu prayer on
-          Earth &mdash; is composed in Awadhi.
+          The Hanuman Chalisa, the most widely recited Hindu prayer on
+          Earth, is composed in Awadhi.
         </motion.p>
       </motion.div>
     </section>

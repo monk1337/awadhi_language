@@ -1,5 +1,4 @@
 import HeroSection from "@/components/landing/HeroSection";
-import CensusFormMockup from "@/components/landing/CensusFormMockup";
 import EuropeanComparison from "@/components/landing/EuropeanComparison";
 import HanumanChalisaReveal from "@/components/landing/HanumanChalisaReveal";
 import SectionPreview from "@/components/landing/SectionPreview";
@@ -10,24 +9,8 @@ import { sections } from "@/lib/constants";
 export default function HomePage() {
   return (
     <>
-      {/* Hero: 38 million stat with census contrast */}
+      {/* Hero */}
       <HeroSection />
-
-      <Divider />
-
-      {/* The Bureaucratic Erasure: interactive census form mockup */}
-      <section className="px-6 py-16 md:py-24">
-        <div className="mx-auto max-w-4xl">
-          <SectionHeading
-            title="The Bureaucratic Erasure"
-            subtitle="India's census doesn't count Awadhi as a language. It's classified as a dialect of Hindi. Try it yourself."
-            align="center"
-          />
-          <div className="mt-12">
-            <CensusFormMockup />
-          </div>
-        </div>
-      </section>
 
       <Divider />
 
@@ -57,7 +40,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl">
           <SectionHeading
             title="Explore the Story"
-            subtitle="Nine chapters tracing the life, erasure, and fight for survival of one of the world's great unrecognized languages."
+            subtitle="Exploring the history, culture, and linguistic heritage of one of the world's great languages."
             align="center"
           />
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

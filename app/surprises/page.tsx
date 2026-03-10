@@ -22,6 +22,15 @@ export default function SurprisesPage() {
         align="center"
       />
 
+      {/* Bollywood image */}
+      <div className="mx-auto max-w-4xl overflow-hidden rounded-xl">
+        <img
+          src="/images/surprises/bollywood.webp"
+          alt="Watercolor painting of Gabbar Singh from Sholay, iconic Bollywood villain who speaks Awadhi"
+          className="h-auto w-full"
+        />
+      </div>
+
       {/* Flip cards */}
       <FlipCardGrid />
 

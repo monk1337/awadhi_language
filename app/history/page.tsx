@@ -6,12 +6,11 @@ import PullQuote from "@/components/shared/PullQuote";
 import FamilyTree from "@/components/timeline/FamilyTree";
 import GoldenAgeCards from "@/components/timeline/GoldenAgeCards";
 import TimelineSection from "@/components/timeline/TimelineSection";
-import HindiInflation from "@/components/timeline/HindiInflation";
 
 export const metadata: Metadata = {
   title: "Origin Story",
   description:
-    "Trace Awadhi from its Prakrit roots through its golden age to its political sidelining. A story of prestige, power, and erasure.",
+    "Trace Awadhi from its Prakrit roots through its golden age of literature and beyond.",
 };
 
 export default function HistoryPage() {
@@ -29,6 +28,17 @@ export default function HistoryPage() {
 
       <Divider />
 
+      {/* Golden age manuscript image */}
+      <div className="mx-auto max-w-3xl overflow-hidden rounded-xl">
+        <img
+          src="/images/history/manuscript.webp"
+          alt="Ancient Awadhi manuscript page with Devanagari script and Mughal decorative borders"
+          className="h-auto w-full"
+        />
+      </div>
+
+      <Divider />
+
       {/* The golden age of Awadhi literature */}
       <GoldenAgeCards />
 
@@ -37,10 +47,14 @@ export default function HistoryPage() {
       {/* The full historical timeline */}
       <TimelineSection />
 
-      <Divider />
-
-      {/* The 1971 census manipulation */}
-      <HindiInflation />
+      {/* Fort William College illustration */}
+      <div className="mx-auto max-w-3xl overflow-hidden rounded-xl">
+        <img
+          src="/images/history/fort-william.webp"
+          alt="Fort William College in colonial Calcutta, circa 1800"
+          className="h-auto w-full"
+        />
+      </div>
 
       {/* Closing pull quote */}
       <div className="mx-auto max-w-3xl pt-16 md:pt-24">

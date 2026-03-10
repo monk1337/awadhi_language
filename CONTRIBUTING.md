@@ -6,7 +6,7 @@ Thank you for your interest in contributing! This project aims to document and c
 
 ### Reporting Issues
 
-- Use [GitHub Issues](https://github.com/monk1337/awadhi_website/issues) to report bugs or suggest features
+- Use [GitHub Issues](https://github.com/monk1337/awadhi_language/issues) to report bugs or suggest features
 - Include screenshots for UI issues
 - Describe the expected vs actual behavior
 - Mention your browser and device

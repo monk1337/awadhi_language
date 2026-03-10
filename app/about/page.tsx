@@ -157,7 +157,7 @@ export default function AboutPage() {
         <RevealOnScroll delay={0.1}>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
-              href="https://github.com/monk1337/awadhi_website"
+              href="https://github.com/monk1337/awadhi_language"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 rounded-lg bg-charcoal px-8 py-4 text-base font-semibold text-cream transition-colors hover:bg-charcoal/90"

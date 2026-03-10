@@ -43,7 +43,7 @@ Awadhi is the language of the Ramcharitmanas, the Hanuman Chalisa, and some of t
 
 ```bash
 # Clone the repository
-git clone https://github.com/monk1337/awadhi_website.git
+git clone https://github.com/monk1337/awadhi_language.git
 cd awadhi_website
 
 # Install dependencies
